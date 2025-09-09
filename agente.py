@@ -1,8 +1,14 @@
-!pip install -q --upgrade langchain-google-genai google-generativeai
+#Instalação 
+
+#!pip install -q --upgrade langchain-google-genai google-generativeai
+
+# Importação API_KEY Google Gemini
 
 from google.colab import userdata
 from langchain_google_genai import ChatGoogleGenerativeAI
 GOOGLE_API_KEY = userdata.get('GEMINI_API_KEY')
+
+# conexão com o Gemini
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
